@@ -15,6 +15,15 @@
   flex-flow: nowrap row;
   list-style-type: none;
 }
+.totalPrice {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+.totalPrice:empty {
+  height: 1.2rem;
+}
+
 @media screen and (max-width: 800px) {
   .toppings {
     justify-content: center;

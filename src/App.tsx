@@ -1,12 +1,13 @@
 import Configurator from 'Components/Configurator';
+import PizzaProvider from 'Components/Context/Pizza';
 import Navigation from 'Components/Navigation/Navigation';
 
 function App() {
   return (
-    <div>
+    <PizzaProvider>
       <Navigation />
       <Configurator />
-    </div>
+    </PizzaProvider>
   );
 }
 

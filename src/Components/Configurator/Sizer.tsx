@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from 'react';
+import { MyPizzaContext } from 'Components/Context/Pizza';
+import { useContext, useEffect, useState } from 'react';
 import styles from './Sizer.module.css';
 
 function Sizer() {
+  const pizza = useContext(MyPizzaContext);
   const [selected, setSelected] = useState('l');
   const [activeL, setActiveL] = useState(true);
   const [activeM, setActiveM] = useState(false);
@@ -16,16 +18,19 @@ function Sizer() {
         setActiveS(true);
         setActiveM(false);
         setActiveL(false);
+        pizza.changeSizePrice('s');
         break;
       case 'm':
         setActiveS(false);
         setActiveM(true);
         setActiveL(false);
+        pizza.changeSizePrice('m');
         break;
       default:
         setActiveS(false);
         setActiveM(false);
         setActiveL(true);
+        pizza.changeSizePrice('l');
         break;
     }
   }, [selected]);
