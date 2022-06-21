@@ -1,4 +1,4 @@
-import { MyPizzaContext } from 'Components/Context/Pizza';
+import { MyPizzaContext } from 'modules/configurator/context/Pizza';
 import { useContext, useState } from 'react';
 import styles from './Discount.module.css';
 

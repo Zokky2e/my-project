@@ -1,7 +1,7 @@
-import ToppingsItem from './ToppingsItem';
 import styles from './Toppings.module.css';
 import { useContext, useEffect, useState } from 'react';
-import { MyPizzaContext } from 'Components/Context/Pizza';
+import { MyPizzaContext } from 'modules/configurator/context/Pizza';
+import ToppingsItem from './ToppingsItem';
 function Toppings() {
   const pizza = useContext(MyPizzaContext);
   const [totalPrice, setTotalPrice] = useState('0');

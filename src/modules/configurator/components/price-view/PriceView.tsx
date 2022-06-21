@@ -1,4 +1,4 @@
-import { MyPizzaContext } from 'Components/Context/Pizza';
+import { MyPizzaContext } from 'modules/configurator/context/Pizza';
 import { useContext, useEffect, useState } from 'react';
 import styles from './PriceView.module.css';
 function PriceView() {

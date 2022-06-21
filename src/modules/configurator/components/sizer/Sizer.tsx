@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { MyPizzaContext } from 'Components/Context/Pizza';
+import { MyPizzaContext } from 'modules/configurator/context/Pizza';
 import { useContext, useEffect, useState } from 'react';
 import styles from './Sizer.module.css';
 
