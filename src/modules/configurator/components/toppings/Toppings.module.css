@@ -1,0 +1,32 @@
+.container {
+  width: 40%;
+  margin: 40px auto 40px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-flow: nowrap column;
+  align-items: center;
+}
+.toppings {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: nowrap row;
+  list-style-type: none;
+}
+.totalPrice {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+.totalPrice:empty {
+  height: 1.2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .toppings {
+    justify-content: center;
+    flex-flow: wrap row;
+  }
+}
