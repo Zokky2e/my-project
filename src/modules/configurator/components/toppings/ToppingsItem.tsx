@@ -1,4 +1,6 @@
-import styles from './ToppingsItem.module.css';
+/** @jsxImportSource @emotion/react */
+
+import { container, item } from './ToppingsItem.styles';
 
 function ToppingsItem(props: {
   item: string;
@@ -9,14 +11,14 @@ function ToppingsItem(props: {
 }) {
   return (
     <div
-      className={styles.container}
+      css={container}
       style={{ backgroundColor: props.selected ? '#e5c3f5' : 'white' }}
       onClick={() => {
         props.setSelected(!props.selected);
       }}
     >
       <div
-        className={styles.item}
+        css={item}
         style={{ backgroundColor: props.selected ? '#ffffff60' : 'white' }}
       >
         {props.item}

@@ -1,4 +1,6 @@
-import styles from './Toppings.module.css';
+/** @jsxImportSource @emotion/react */
+
+import { container, toppings, totalPriceCss } from './Toppings.styles';
 import { useContext, useEffect, useState } from 'react';
 import { MyPizzaContext } from 'modules/configurator/context/Pizza';
 import ToppingsItem from './ToppingsItem';
@@ -39,9 +41,9 @@ function Toppings() {
     selectedBacon,
   ]);
   return (
-    <div className={styles.container}>
+    <div css={container}>
       <h1>Toppings! Toppings!</h1>
-      <ul className={styles.toppings}>
+      <ul css={toppings}>
         <li>
           <ToppingsItem
             item="🌶"
@@ -120,7 +122,7 @@ function Toppings() {
           />
         </li>
       </ul>
-      <div className={styles.totalPrice}>{totalPrice}</div>
+      <div css={totalPriceCss}>{totalPrice}</div>
     </div>
   );
 }

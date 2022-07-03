@@ -1,4 +1,6 @@
-.container {
+import { css } from '@emotion/react';
+
+export const container = css`
   height: 100px;
   width: 70px;
   padding: 20px 12px;
@@ -9,8 +11,15 @@
   text-align: center;
   user-select: none;
   cursor: pointer;
-}
-.item {
+  :hover {
+    background-color: #e5c3f5 !important;
+  }
+  :hover > .item {
+    background-color: #ffffff60 !important;
+  }
+`;
+
+export const item = css`
   width: 40px;
   height: 40px;
   padding: 4px;
@@ -23,14 +32,4 @@
   background: transparant;
   box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.03);
   border-radius: 40px;
-}
-/*
-koristen important jer iz nekog
- razloga hover ne radi u kombinaciji sa useState
-*/
-.container:hover {
-  background-color: #e5c3f5 !important;
-}
-.container:hover > .item {
-  background-color: #ffffff60 !important;
-}
+`;

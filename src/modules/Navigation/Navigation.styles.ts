@@ -1,9 +1,12 @@
-.header {
+import { css } from '@emotion/react';
+
+export const header = css`
   padding: 0;
   width: 100%;
   color: black;
-}
-.container {
+`;
+
+export const container = css`
   padding: 0;
   width: 40%;
   margin: 32px auto;
@@ -11,19 +14,21 @@
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-}
-.logo {
+`;
+
+export const logo = css`
   font-size: 1.5rem;
-}
-.title {
+`;
+
+export const title = css`
   font-size: 1rem;
   font-weight: bold;
-}
-.button button {
+`;
+
+export const button = css`
   padding: 16px 40px;
   border-radius: 36px;
   border: 2px solid #dbdbdb;
-
   background-color: white;
   cursor: pointer;
-}
+`;
