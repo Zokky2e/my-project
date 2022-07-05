@@ -1,8 +1,9 @@
+/** @jsxImportSource @emotion/react */
 import { MyPizzaContext } from 'modules/configurator/context/Pizza';
 import { useContext, useState } from 'react';
-import styles from './Discount.module.css';
+import { container, entry } from './Discount.styles';
 
-function Discount() {
+export function Discount() {
   const pizza = useContext(MyPizzaContext);
   const [discount, setDiscount] = useState('');
   function checkDiscountValue() {
@@ -11,9 +12,9 @@ function Discount() {
     }
   }
   return (
-    <div className={styles.container}>
+    <div css={container}>
       <h1>Get the discount</h1>
-      <div className={styles.entry}>
+      <div css={entry}>
         <input
           value={discount}
           onChange={(e) => setDiscount(e.target.value)}
@@ -26,5 +27,3 @@ function Discount() {
     </div>
   );
 }
-
-export default Discount;

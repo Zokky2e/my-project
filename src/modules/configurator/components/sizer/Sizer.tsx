@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/** @jsxImportSource @emotion/react */
+
 import { MyPizzaContext } from 'modules/configurator/context/Pizza';
 import { useContext, useEffect, useState } from 'react';
-import styles from './Sizer.module.css';
+import { container, buttons } from './Sizer.styles';
 
-function Sizer() {
+export function Sizer() {
   const pizza = useContext(MyPizzaContext);
   const [selected, setSelected] = useState('l');
   const [activeL, setActiveL] = useState(true);
@@ -35,9 +37,9 @@ function Sizer() {
     }
   }, [selected]);
   return (
-    <div className={styles.container}>
+    <div css={container}>
       <h1>Pizza! Pizza! size</h1>
-      <div className={styles.buttons}>
+      <div css={buttons}>
         <button
           id="s"
           style={{
@@ -72,5 +74,3 @@ function Sizer() {
     </div>
   );
 }
-
-export default Sizer;

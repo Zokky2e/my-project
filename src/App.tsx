@@ -1,7 +1,5 @@
-import Configurator from 'modules/configurator';
 import PizzaProvider from 'modules/configurator/context/Pizza';
-import Navigation from 'modules/Navigation/Navigation';
-
+import { Navigation, Configurator } from './modules/index';
 function App() {
   return (
     <PizzaProvider>

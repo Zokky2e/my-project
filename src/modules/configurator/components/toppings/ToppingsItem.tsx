@@ -1,6 +1,8 @@
-import styles from './ToppingsItem.module.css';
+/** @jsxImportSource @emotion/react */
 
-function ToppingsItem(props: {
+import { container, item } from './ToppingsItem.styles';
+
+export function ToppingsItem(props: {
   item: string;
   name: string;
   price: number;
@@ -9,14 +11,14 @@ function ToppingsItem(props: {
 }) {
   return (
     <div
-      className={styles.container}
+      css={container}
       style={{ backgroundColor: props.selected ? '#e5c3f5' : 'white' }}
       onClick={() => {
         props.setSelected(!props.selected);
       }}
     >
       <div
-        className={styles.item}
+        css={item}
         style={{ backgroundColor: props.selected ? '#ffffff60' : 'white' }}
       >
         {props.item}
@@ -25,5 +27,3 @@ function ToppingsItem(props: {
     </div>
   );
 }
-
-export default ToppingsItem;
