@@ -61,7 +61,7 @@ export const section = css`
     font-size: 1rem;
     margin: auto;
   }
-  :first-child {
+  :first-of-type {
     border-right: 1px dashed #dbdbdb;
   }
 `;

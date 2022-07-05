@@ -27,7 +27,7 @@ export const item = css`
   display: flex;
   text-align: center;
   justify-content: center;
-  align-item: center;
+  align-items: center;
   font-size: 1.2rem;
   background: transparant;
   box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.03);
