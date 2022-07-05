@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { MyPizzaContext } from 'modules/configurator/context/Pizza';
-import { useContext, useEffect, useState } from 'react';
+import { useCalculate } from 'modules/configurator/hooks/useCalculate';
+import { useContext, useState } from 'react';
 import {
   container,
   pizzaCss,
@@ -10,15 +11,13 @@ import {
 } from './PriceView.styles';
 export function PriceView() {
   const pizza = useContext(MyPizzaContext);
-  const [totalPrice, setTotalPrice] = useState(0);
   const [quantity, setQuantity] = useState('1');
-  useEffect(() => {
-    const qty = quantity === '' ? 1 : parseInt(quantity);
-
-    setTotalPrice(
-      pizza.discount * (qty * (pizza.sizePrice + pizza.toppingsPrice)),
-    );
-  }, [quantity, pizza]);
+  const totalPrice = useCalculate(
+    pizza.sizePrice,
+    pizza.toppingsPrice,
+    pizza.discount,
+    quantity,
+  );
   return (
     <div css={container}>
       <div css={pizzaCss}>
@@ -28,7 +27,9 @@ export function PriceView() {
         <div css={section}>
           <input
             value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
+            onChange={(e) => {
+              setQuantity(e.target.value);
+            }}
           />
           <p>QTY</p>
         </div>
