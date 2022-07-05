@@ -8,7 +8,7 @@ import {
   section,
   price,
 } from './PriceView.styles';
-function PriceView() {
+export function PriceView() {
   const pizza = useContext(MyPizzaContext);
   const [totalPrice, setTotalPrice] = useState(0);
   const [quantity, setQuantity] = useState('1');
@@ -43,5 +43,3 @@ function PriceView() {
     </div>
   );
 }
-
-export default PriceView;

@@ -3,7 +3,7 @@ import { MyPizzaContext } from 'modules/configurator/context/Pizza';
 import { useContext, useState } from 'react';
 import { container, entry } from './Discount.styles';
 
-function Discount() {
+export function Discount() {
   const pizza = useContext(MyPizzaContext);
   const [discount, setDiscount] = useState('');
   function checkDiscountValue() {
@@ -27,5 +27,3 @@ function Discount() {
     </div>
   );
 }
-
-export default Discount;

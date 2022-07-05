@@ -5,7 +5,7 @@ import { MyPizzaContext } from 'modules/configurator/context/Pizza';
 import { useContext, useEffect, useState } from 'react';
 import { container, buttons } from './Sizer.styles';
 
-function Sizer() {
+export function Sizer() {
   const pizza = useContext(MyPizzaContext);
   const [selected, setSelected] = useState('l');
   const [activeL, setActiveL] = useState(true);
@@ -74,5 +74,3 @@ function Sizer() {
     </div>
   );
 }
-
-export default Sizer;

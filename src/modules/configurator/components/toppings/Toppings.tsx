@@ -3,8 +3,8 @@
 import { container, toppings, totalPriceCss } from './Toppings.styles';
 import { useContext, useEffect, useState } from 'react';
 import { MyPizzaContext } from 'modules/configurator/context/Pizza';
-import ToppingsItem from './ToppingsItem';
-function Toppings() {
+import { ToppingsItem } from './index';
+export function Toppings() {
   const pizza = useContext(MyPizzaContext);
   const [totalPrice, setTotalPrice] = useState('0');
   const [selectedChilli, setSelectedChilli] = useState(false);
@@ -126,5 +126,3 @@ function Toppings() {
     </div>
   );
 }
-
-export default Toppings;

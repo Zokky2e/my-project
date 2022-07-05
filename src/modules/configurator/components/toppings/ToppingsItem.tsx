@@ -2,7 +2,7 @@
 
 import { container, item } from './ToppingsItem.styles';
 
-function ToppingsItem(props: {
+export function ToppingsItem(props: {
   item: string;
   name: string;
   price: number;
@@ -27,5 +27,3 @@ function ToppingsItem(props: {
     </div>
   );
 }
-
-export default ToppingsItem;

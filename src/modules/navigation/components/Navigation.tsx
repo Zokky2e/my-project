@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { header, container, title, logo, button } from './Navigation.styles';
 
-function Navigation() {
+export function Navigation() {
   return (
     <div css={header}>
       <ul css={container}>
@@ -14,5 +14,3 @@ function Navigation() {
     </div>
   );
 }
-
-export default Navigation;
